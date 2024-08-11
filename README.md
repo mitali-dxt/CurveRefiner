@@ -2,7 +2,7 @@
 CurveRefiner is an innovative project designed to visualize 2D curves represented as polylines. It focuses on enhancing the curves by considering key properties such as regularization, symmetry, and completeness.
 
 # Objective
-The project is designed to work with curves represented by cubic Bézier curves and polylines, with outputs visualized in SVG format.
+The project is designed to work with curves represented by cubic Bézier curves and polylines, with outputs visualized in CSV format.
 
 
 # Features
@@ -22,13 +22,23 @@ The project is designed to work with curves represented by cubic Bézier curves 
 - Disconnected Shapes: Curves that are fragmented due to occlusion.
 
 # Outcome
+## Regularization of the input curve
+![Screenshot 2024-08-11 232241](https://github.com/user-attachments/assets/4c0c7cde-1472-42df-8806-b9f271a1aa90)
 
-![Screenshot 2024-08-11 220303](https://github.com/user-attachments/assets/0f130d9a-d8e4-4226-9ff5-673ab2834175)
-  
-![Screenshot 2024-08-11 220328](https://github.com/user-attachments/assets/64deef38-c5a5-423e-a18e-e37464e86a5f)
+## Detection of symmetry in the input curve
+![Screenshot 2024-08-11 232258](https://github.com/user-attachments/assets/1eefabf4-6c67-48e2-9cc8-81fe0f978a3c)
+
+## Auto Completion of the input curve
+![Screenshot 2024-08-11 220328](https://github.com/user-attachments/assets/8daa8232-7672-4b24-9243-581bc5619f2b)
 
 
-![Screenshot 2024-08-11 220613](https://github.com/user-attachments/assets/ae36d2fa-738c-470d-a4b6-d61490079752)
+# Tech & Algorithms
+- OpenCV
+- Mathematical Equations
+- Linear Regression
+- Python and its libraries
 
-![Screenshot 2024-08-11 220632](https://github.com/user-attachments/assets/ce559c7b-7740-4611-ab54-92baf65068d1)
+
+
+
 
