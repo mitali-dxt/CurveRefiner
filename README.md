@@ -5,7 +5,7 @@ CurveRefiner is an innovative project designed to visualize 2D curves represente
 The project is designed to work with curves represented by cubic Bézier curves and polylines, with outputs visualized in CSV format.
 
 # Demo Video
-[View demo video](https://youtu.be/bWUPfRIlxAM?si=6W1nE2e9hh610Ndp)
+[View demo video](https://drive.google.com/file/d/1La5Fj-wToV8BDozNfZ7kV4jEnCZgPEAP/view?usp=sharing)
 # Features
 ## Regularize Curves
 - Straight Lines: Detect straight lines within the curve data.
