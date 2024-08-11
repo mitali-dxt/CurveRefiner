@@ -1,5 +1,5 @@
-# PathRefiner
-PathRefiner is an innovative project designed to visualize 2D curves represented as polylines. It focuses on enhancing the curves by considering key properties such as regularization, symmetry, and completeness.
+# CurveRefiner
+CurveRefiner is an innovative project designed to visualize 2D curves represented as polylines. It focuses on enhancing the curves by considering key properties such as regularization, symmetry, and completeness.
 
 # Objective
 The project is designed to work with curves represented by cubic Bézier curves and polylines, with outputs visualized in SVG format.
