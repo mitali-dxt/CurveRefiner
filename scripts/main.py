@@ -148,7 +148,7 @@ def similarity_star(points):
         print(f"OpenCV error: {e}")
         return 0
 
-def similarity_ellipse(points):
+#def similarity_ellipse(points):
     if len(points) < 5:
         return 0
     # Fit an ellipse using OpenCV
@@ -179,7 +179,7 @@ def similarity_ellipse(points):
     except Exception as e:
         print(f"Error fitting ellipse: {e}")
 
-def similarity_saturn_ring(points):
+#def similarity_saturn_ring(points):
     if len(points) < 10:
         return 0
     main_ellipse = regularize_ellipse(points)
@@ -229,13 +229,13 @@ def process_shapes(paths_XYs, threshold=0.74):
             rectangle_prob = similarity_rectangle(points)
             square_prob = similarity_square(points)
             star_prob = similarity_star(points)
-            ellipse_prob = similarity_ellipse(points)
-            saturn_ring_prob = similarity_saturn_ring(points)
+            #ellipse_prob = similarity_ellipse(points)
+            #saturn_ring_prob = similarity_saturn_ring(points)
 
             # Determine the maximum similarity probability
-            max_prob = max(line_prob, circle_prob, rectangle_prob, square_prob, star_prob, ellipse_prob, saturn_ring_prob)
+            max_prob = max(line_prob, circle_prob, rectangle_prob, square_prob, star_prob)#, ellipse_prob, saturn_ring_prob)
 
-            print(f"line_prob: {line_prob}, circle_prob: {circle_prob}, rectangle_prob: {rectangle_prob}, square_prob: {square_prob}, star_prob: {star_prob}, ellipse_prob: {ellipse_prob}, saturn_ring_prob: {saturn_ring_prob}")
+            print(f"line_prob: {line_prob}, circle_prob: {circle_prob}, rectangle_prob: {rectangle_prob}, square_prob: {square_prob}, star_prob: {star_prob}")#, ellipse_prob: {ellipse_prob}, saturn_ring_prob: {saturn_ring_prob}")
 
             # Regularize the shape based on the highest similarity probability
             if max_prob < threshold:
@@ -250,10 +250,10 @@ def process_shapes(paths_XYs, threshold=0.74):
                 processed_paths.append([regularize_square(points)])
             elif max_prob == star_prob:
                 processed_paths.append([regularize_star(points)])
-            elif max_prob == ellipse_prob:
-                processed_paths.append([regularize_ellipse(points)])
-            elif max_prob == saturn_ring_prob:
-                processed_paths.append([regularize_saturn_ring(points)])
+            #elif max_prob == ellipse_prob:
+                #processed_paths.append([regularize_ellipse(points)])
+            #elif max_prob == saturn_ring_prob:
+                #processed_paths.append([regularize_saturn_ring(points)])
                 
             # If symmetry lines are detected
             if reflectional_lines > 0:
